@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+.star {
+  background-color: #ffffff61;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+
+  animation-duration: 5s;
+  animation-name: shootingstar;
+  animation-iteration-count: infinite;
+
+  transform: rotate(20deg) scaleX(40);
+  animation-timing-function: linear;
+}
+
+@keyframes shootingstar {
+  from {
+    left: 0%;
+    top: 200px;
+  }
+
+  10% {
+    left: 110%;
+    top: 500px;
+  }
+
+  100% {
+    left: 110%;
+    top: 500px;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+  background-color: #040036;
+}
+
+#background {
+  position: absolute;
+  background: linear-gradient(0deg, #040036 30%, black);
+  height: 2000px;
+  width: 100vw;
+  transform: translateZ(-200px) scale(2);
+  z-index: -1;
+}
+
+
+#test {
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  top: 800px;
+  background-color: lime;
+  z-index: 500;
+}
+
+#parallax {
+  perspective: 200px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin: 50% 0;
+}
+
+.planet {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  left: 50%;
+
+  transform-style: preserve-3d;
+
+  transform: translateY(500px) translateZ(0px) scale(1);
+
+  background: linear-gradient(303deg, #010028, #ffd58e69);
+}
+
+.p1 {
+  background-color: yellow;
+  left: calc(50% - 100px);
+  transform: translateY(632px) translateZ(-50px) scale(1.25);
+}
+
+.p2 {
+  background-color: teal;
+  transform: translateY(1026px) translateZ(-200px) scale(2);
+}
+
+.p3 {
+  background-color: #282828;
+  left: calc(50% + 100px);
+}
+
+#repeat {
+  background: url('./repeat.png');
+  width: 100vw;
+  height: 600px;
+  position: absolute;
+  transform: translateZ(-200px) scale(2);
+  top: 1350px;
+  overflow: hidden;
+}
+
+#content {
+  display: block;
+  position: absolute;
+  top: 700px;
+  width: 600px;
+  height: 1000px;
+  left: calc(50% - 300px);
+  z-index: 2;
+  padding: 50px;
+  background-color: #040036;
+  box-shadow: 0 0 2px black;
+}
