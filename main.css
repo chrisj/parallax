@@ -13,24 +13,29 @@
   animation-name: shootingstar;
   animation-iteration-count: infinite;
 
-  transform: rotate(20deg) scaleX(40);
+  transform: rotate(10deg) scaleX(40);
   animation-timing-function: linear;
 }
 
 @keyframes shootingstar {
   from {
-    left: 0%;
-    top: 200px;
+    left: -2000px;
+    top: 0px;
   }
 
-  10% {
-    left: 110%;
-    top: 500px;
+  30% {
+    left: -2000px;
+    top: 0px;
   }
 
-  100% {
-    left: 110%;
-    top: 500px;
+  60% {
+    left: 2000px;
+    top: 600px;
+  }
+
+  to {
+    left: 2000px;
+    top: 600px;
   }
 }
 
